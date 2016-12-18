@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
  * Show Task Dashboard
  */
 Route::get('/', function () {
-    retunr view('contacts');
+    return view('contacts');
 });
 
 /**
