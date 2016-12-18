@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
  * Show Task Dashboard
  */
 Route::get('/', function () {
-    return view('contacts');
+  $contacts = Contact::orderBy('created_at', 'asc')->get();
+
+  return view('contacts', [
+        'contacts' => $contacts
+    ]);
 });
 
 /**
@@ -24,7 +28,11 @@ Route::post('/contact', function (Request $request) {
               ->withErrors($validator);
       }
 
-      // Create Contact...
+    $contact = new Contact;
+    $contact->name = $request->name;
+    $contact->save();
+
+    return redirect('/');
 });
 
 /**
