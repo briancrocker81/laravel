@@ -8,6 +8,7 @@
 
     <div class="panel-body">
         <!-- Display Validation Errors -->
+        @include('common.errors')
 
         <!-- New Task Form -->
         <form action="{{ url('contact') }}" method="POST" class="form-horizontal">
