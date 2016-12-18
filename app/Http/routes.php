@@ -3,9 +3,6 @@
 use App\Contact;
 use Illuminate\Http\Request;
 
-/**
- * Show Task Dashboard
- */
 Route::get('/', function () {
   $contacts = Contact::orderBy('created_at', 'asc')->get();
 
@@ -14,9 +11,6 @@ Route::get('/', function () {
     ]);
 });
 
-/**
- * Add New Task
- */
 Route::post('/contact', function (Request $request) {
   $validator = Validator::make($request->all(), [
           'name' => 'required|max:255',
@@ -38,6 +32,8 @@ Route::post('/contact', function (Request $request) {
 /**
  * Delete Task
  */
-Route::delete('/contact/{contact}', function (Contact $task) {
-    //
+Route::delete('/contact/{contact}', function (Contact $contact) {
+  $contact->delete();
+
+  return redirect('/');
 });

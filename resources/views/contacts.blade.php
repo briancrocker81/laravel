@@ -34,38 +34,45 @@
         </form>
     </div>
 
-    <!-- Current Tasks -->
-        @if (count($contacts) > 0)
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Address Book Contacts
-                </div>
-
-                <div class="panel-body">
-                    <table class="table table-striped task-table">
-
-                        <!-- Table Headings -->
-                        <thead>
-                            <th>Contact</th>
-                            <th>&nbsp;</th>
-                        </thead>
-
-                        <!-- Table Body -->
-                        <tbody>
-                            @foreach ($contacts as $contact)
-                                <tr>
-                                    <!-- Task Name -->
-                                    <td class="table-text">
-                                        <div>{{ $contact->name }}</div>
-                                    </td>
-
-                                    <td>
-                                        <!-- TODO: Delete Button -->
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+    @if (count($contacts) > 0)
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Address Book Contacts
             </div>
-        @endif
+
+            <div class="panel-body">
+                <table class="table table-striped contact-table">
+
+                    <!-- Table Headings -->
+                    <thead>
+                        <th>Contact</th>
+                        <th>&nbsp;</th>
+                    </thead>
+
+                    <!-- Table Body -->
+                    <tbody>
+                        @foreach ($contacts as $contact)
+                            <tr>
+                                <!-- Task Name -->
+                                <td class="table-text">
+                                    <div>{{ $contact->name }}</div>
+                                </td>
+
+                                <td>
+                                  <form action="{{ url('contact/'.$contact->id) }}" method="POST">
+                                      {{ csrf_field() }}
+                                      {{ method_field('DELETE') }}
+
+                                      <button type="submit" class="btn btn-danger">
+                                          <i class="fa fa-trash"></i> Delete
+                                      </button>
+                                  </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    @endif
+@endsection
