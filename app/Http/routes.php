@@ -7,31 +7,28 @@ Route::get('/', function () {
   $contacts = Contact::orderBy('created_at', 'asc')->get();
 
   return view('contacts', [
-        'contacts' => $contacts
-    ]);
+    'contacts' => $contacts
+  ]);
 });
 
 Route::post('/contact', function (Request $request) {
   $validator = Validator::make($request->all(), [
-          'name' => 'required|max:255',
-      ]);
+    'name' => 'required|max:255',
+  ]);
 
-      if ($validator->fails()) {
-          return redirect('/')
-              ->withInput()
-              ->withErrors($validator);
-      }
+  if ($validator->fails()) {
+    return redirect('/')
+      ->withInput()
+      ->withErrors($validator);
+  }
 
-    $contact = new Contact;
-    $contact->name = $request->name;
-    $contact->save();
+  $contact = new Contact;
+  $contact->name = $request->name;
+  $contact->save();
 
-    return redirect('/');
+  return redirect('/');
 });
 
-/**
- * Delete Task
- */
 Route::delete('/contact/{contact}', function (Contact $contact) {
   $contact->delete();
 
