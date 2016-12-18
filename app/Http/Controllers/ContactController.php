@@ -83,7 +83,13 @@ class ContactController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'description' => 'required',
+            'name' => 'required',
+            'company_name' => 'required',
+            'job_title' => 'required',
+            'email' => 'required',
+            'phone_number' => 'required',
+            'mobile_number' => 'required',
+            'address' => 'required',
         ]);
 
         Contact::find($id)->update($request->all());
