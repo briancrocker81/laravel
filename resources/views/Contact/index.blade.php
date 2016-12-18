@@ -8,7 +8,7 @@
                 <h2>Contacts</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('contact.create') }}"> Create New Contact</a>
+                <a class="btn btn-secondary" href="{{ route('contact.create') }}"> Create New Contact</a>
             </div>
         </div>
     </div>
