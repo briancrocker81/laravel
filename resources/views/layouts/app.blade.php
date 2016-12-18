@@ -3,7 +3,7 @@
   <head>
     <title>Address book</title>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
   </head>
 
   <body>
@@ -13,6 +13,8 @@
       </nav>
     </div>
 
-    @yield('content')
+    <div class="container">
+      @yield('content')
+    </div>
   </body>
 </html>
