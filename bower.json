@@ -1,5 +1,25 @@
 {
   "name": "AddressBook",
+  "authors": [
+    "Brian Crocker <briancrocker81@gmail.com>"
+  ],
+  "description": "Address book application",
+  "main": "",
+  "keywords": [
+    "Laravel5.2",
+    "Bower",
+    "Gulp"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "bootstrap": "~4.0.0"
   }
