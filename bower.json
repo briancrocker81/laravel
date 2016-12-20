@@ -11,7 +11,7 @@
     "Gulp"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/briancrocker81/laravel",
   "ignore": [
     "**/.*",
     "node_modules",

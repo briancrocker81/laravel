@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+    <div id="control-row" class="row">
+        <div class="col-md-12">
+            <div class="float-xs-left">
                 <h2>Create New Contact</h2>
             </div>
-            <div class="pull-right">
+            <div class="float-xs-right">
                 <a class="btn btn-primary" href="{{ route('contact.index') }}"> Back</a>
             </div>
         </div>

@@ -1,0 +1,18 @@
+body {
+  padding: 40px 0;
+}
+
+#control-row {
+  margin-bottom: 15px;
+}
+
+
+/* overide Bootstrap 4 .primary class colour */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #B84945;
+    border-color: #B84945;
+}
