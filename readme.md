@@ -8,9 +8,9 @@ Upon downloading dependencies must be installed.
 The .env is included in this project.  
 
 ### Database
-Database: addressbook
-Username: addressbookuser
-Password: addressbookpass
+* **Database:** addressbook
+* **Username:** addressbookuser
+* **Password:** addressbookpass
 
 ### Completed requirements
 * All database requirements
