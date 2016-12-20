@@ -7,6 +7,11 @@ body {
 }
 
 
+/* overide Bootstrap .btn values*/
+.btn {
+  margin-right: 5px;
+}
+
 /* overide Bootstrap 4 .primary class colour */
 .btn-primary,
 .btn-primary:hover,
